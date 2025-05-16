@@ -8,7 +8,7 @@ export default function WatchList({ movies, watchlist, toggleWatchlist }) {
       <h1>Your WatchList</h1>
       <div className="watchlist">
         {watchlist.map((movieId) => {
-          const movie = movies.find((movie) => movie.id === movieId);
+          const movie = movies.find((movie) => movie.id === movieId)
           return (
             <MovieCard
               key={movieId}
