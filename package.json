@@ -10,6 +10,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "redux": "^5.0.1"
+    "@reduxjs/toolkit": "^2.8.2",
+    "axios": "^1.9.0",
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0"
   }
 }
