@@ -1,0 +1,23 @@
+
+h1{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+h1+h2{
+    font-size: 1.1rem;
+    margin-top: -1.4rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+main{
+    max-width: 40rem;
+    margin: auto;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    padding: 0 0.5rem;
+
+}

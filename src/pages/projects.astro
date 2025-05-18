@@ -1,0 +1,106 @@
+---
+const activities = [
+  "Illegal betting operations",
+  "Running protection rackets",
+  "Smuggling and bootlegging",
+  "Robbery and heists",
+  "Bribing police and officials",
+  "Violent enforcement and intimidation",
+  "Political manipulation",
+  "Money laundering",
+  "Arms dealing",
+  "Espionage",
+  "Underground boxing matches",
+  "Counterfeiting",
+  "Horse racing fraud",
+  "Illegal distilleries",
+  "Black market trading",
+  "Sabotage",
+  "Extortion",
+  "Kidnapping for ransom"
+];
+import Footer from "../components/Footer.astro";
+---
+
+<h1 class="activities-title">Peaky Blinders Gang Activities</h1>
+<div class="activities-grid">
+  {activities.map((activity) => (
+    <div class="activities-card">{activity}</div>
+  ))}
+</div>
+<Footer></Footer>
+<style>
+  html {
+    scroll-behavior: smooth; /* Smooth scrolling for the page */
+  }
+
+  .activities-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 0 2px 8px #0001;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for the title */
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px; /* Add perspective for 3D effect */
+  }
+
+  .activities-card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px #0002;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.15rem;
+    color: #333;
+    transform: rotateX(15deg) translateZ(-50px); /* Initial 3D effect */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInCard 0.8s ease-out forwards;
+  }
+
+  .activities-card:nth-child(odd) {
+    animation-delay: 0.2s; /* Staggered animation for odd cards */
+  }
+
+  .activities-card:nth-child(even) {
+    animation-delay: 0.4s; /* Staggered animation for even cards */
+  }
+
+  .activities-card:hover {
+    transform: rotateX(0deg) translateZ(0) scale(1.05); /* Hover effect */
+    box-shadow: 0 6px 30px #0003;
+    background: #e0e0e7;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: rotateX(30deg) translateZ(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(15deg) translateZ(-50px);
+    }
+  }
+</style>
