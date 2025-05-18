@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cakeReducer from "./cake/cakeReducer";
+import rootReducer from "./rootReducer";
+import logger from "redux-logger";
 
 const store = configureStore({
-  reducer: {
-    cake: cakeReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
