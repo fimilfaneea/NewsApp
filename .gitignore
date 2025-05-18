@@ -7,7 +7,9 @@
 
 # testing
 /coverage
-
+/jest
+/.nyc_output
+/test-results
 # production
 /build
 
